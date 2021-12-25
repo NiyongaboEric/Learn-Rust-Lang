@@ -1,5 +1,7 @@
-mod get_request
+#[path="./exercises/httpbin_request.rs"]
+mod httpbin_request;
+
 
 fn main() {
-    get_request::run()
+	httpbin_request::ipaddres();
 }
