@@ -10,3 +10,5 @@ openssl = { version = "0.10", features = ["vendored"] }
 reqwest  = { version = "0.11.8", features = ["json"] } # request with JSON parsing support
 futures = { version = "0.3", default-features = false } # for our sync / await blocks
 tokio = { version = "1.15.0", features = ["full"] } # for our async runtime
+
+[dev-dependencies]
