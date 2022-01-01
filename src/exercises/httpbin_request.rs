@@ -1,10 +1,9 @@
 use reqwest;
 use std::error::Error;
-use std::collections::HashMap;
 
 
 #[tokio::main]
-pub async fn ipaddres() -> Result<(), Box<dyn Error>> {
+pub async fn ipaddres() -> Result<String, Box<dyn Error>> {
 	let url: &str = "https://httpbin.org/ip";
 	let client = reqwest::Client::new();
 	let res = client
@@ -12,8 +11,7 @@ pub async fn ipaddres() -> Result<(), Box<dyn Error>> {
 		.header("Accept", "text/plain")
 		.send()
 		.await?
-		.json::<HashMap<String, String>>()
+		.text()
 		.await?;
-	println!("My PC IP Addres is {:#?}", res);
-	Ok(())
+	Ok(res)
 }
