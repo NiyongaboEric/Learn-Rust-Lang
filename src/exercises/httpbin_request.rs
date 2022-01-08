@@ -22,7 +22,7 @@ mod tests {
 
 	#[tokio::test]
 	async fn ipaddres() {
-		let url: &str = "https://httpbin.org/ip";
+		let url: &str = "https://httpbin.org/ip"; 
 		let client =reqwest::Client::new();
 
 		let response = client
