@@ -2,14 +2,7 @@
 name = "learn_rust_lang"
 version = "0.1.0"
 edition = "2021"
-authors = ["NiyongaboEric"]
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-openssl = { version = "0.10", features = ["vendored"] }
-reqwest  = { version = "0.11.8", features = ["blocking", "json"] } # request with JSON parsing support
-futures = { version = "0.3", default-features = false } # for our sync / await blocks
-tokio = { version = "1.15.0", features = ["full"] } # for our async runtime
-
-[dev-dependencies]
-mockito = "0.30"
